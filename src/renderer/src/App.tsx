@@ -1,11 +1,16 @@
-import { Content, DraggableTopBar, RootLayout, Sidebar } from './components'
+import { ActionButtonsRow, Content, DraggableTopBar, RootLayout, Sidebar } from './components'
 
 function App(): JSX.Element {
   return (
     <>
       <DraggableTopBar />
       <RootLayout>
-        <Sidebar className="p-2 bg-gray-900 ">sidebar</Sidebar>
+        <Sidebar className=" bg-gray-900 ">
+          <div className="border-b  p-2 border-zinc-600/50 ">File name</div>
+          <div className="p-2">
+            <ActionButtonsRow className="flex justify-between" />
+          </div>
+        </Sidebar>
         <Content className="border-l bg-slate-900 border-l-white/20">content</Content>
       </RootLayout>
     </>
